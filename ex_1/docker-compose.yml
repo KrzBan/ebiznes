@@ -1,0 +1,6 @@
+version: "3.9"
+
+services:
+  ex1:
+    image: krzban/ebiznes-ex1
+    container_name: ex1
