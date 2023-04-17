@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  app:
+    stdin_open: true
+    tty: true
+    build: .
+    ports:
+      - 8000:8000
+      - 4040:4040
+    volumes:
+      - ".:/home/student/ebiz"
