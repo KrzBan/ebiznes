@@ -7,5 +7,6 @@ services:
     ports:
       - 8000:8000
       - 4040:4040
+      - 1323:1323
     volumes:
-      - ".:/home/student/ebiz"
+      - ".:/home/student/projobj"
