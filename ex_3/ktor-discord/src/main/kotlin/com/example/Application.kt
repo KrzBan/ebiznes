@@ -10,7 +10,9 @@ import dev.kord.gateway.Intent
 import dev.kord.gateway.PrivilegedIntent
 
 suspend fun main() {
-    val kord = Kord("TOKEN_HERE")
+    val token = System.getenv("token")
+    println(token)
+    val kord = Kord(token)
 
     kord.on<MessageCreateEvent> { // runs every time a message is created that our bot can read
 
