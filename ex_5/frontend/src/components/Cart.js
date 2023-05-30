@@ -2,7 +2,7 @@
 import Product from "./Product";
 import Payment from "./Payment";
 import {useEffect, useState} from "react";
-import Server, {FetchProducts} from "./Server";
+import Server from "./Server";
 
 export default function Cart() {
 
@@ -16,14 +16,16 @@ export default function Cart() {
 
                 const totalPrice = products.reduce((accumulator, product)=> accumulator + product.price, 0);
                 setTotalAmount(totalPrice);
+            }).catch(err=>{
+                console.log(err);
             })
     }, []);
 
     return (
         <div>
             <p>Products:</p>
-            {products.map((product, id)=>{
-                return (<Product key={id} name={product.name} price={product.price}/>)
+            {products.map((product)=>{
+                return (<Product key={product} name={product.name} price={product.price}/>)
             })}
             <br/>
             <p>Payment info:</p>
