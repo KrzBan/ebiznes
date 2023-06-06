@@ -10,7 +10,8 @@ export async function FetchProducts() {
 }
 
 
-export default {
+const Server = {
     SendPaymentInfo,
     FetchProducts
-}
+};
+export default Server;
